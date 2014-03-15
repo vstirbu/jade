@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Jade - Template Engine
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href="/style/bundle.css")
+    include ./includes/mixins.jade
+  body
+  body
+    #wrap
+      #content
+        .logo-container.hidden-xs
+          a(href="/")
+            img(src="/style/logo.png")
+            .sr-only Jade - Node Template Engine
+        .navbar.navbar-default.navbar-static-top
+          .container
+            .navbar-header.visible-xs
+              button.navbar-toggle(type='button' data-toggle='collapse' data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand(href='/') JADE
+            .collapse.navbar-collapse
+              ul.nav.navbar-nav
+                block navsections
+                  li
+                    a(href='/reference') Language Reference
+                  li
+                    a(href='/api') API
+                  li
+                    a(href='/command-line') Command Line
+              .pull-right
+                ul.nav.navbar-nav
+                  li: a(href='/history') Change Log
+                  li: a(href='/coverage') Code Coverage
+                  li: a(href='https://travis-ci.org/visionmedia/jade') Test Results
+                  li: a(href='https://github.com/visionmedia/jade') GitHub Repository
+              block navigation
+        .container
+          block content
+      #push
+    #footer-wrapper
+      footer
+        .container
+          p
+            | Jade is a template language created by&nbsp;
+            a(href="http://tjholowaychuk.com/") @tjholowaychuk
+            | &nbsp;and maintained by&nbsp;
+            a.jepso(href='http://www.forbeslindesay.co.uk') @ForbesLindesay
+    include ./includes/ga.jade
+    script(src="/client.js")

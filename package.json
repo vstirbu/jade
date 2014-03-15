@@ -29,7 +29,20 @@
     "less": "*",
     "uglify-js": "*",
     "browserify": "*",
-    "linify": "*"
+    "linify": "*",
+    "less-file": "0.0.8",
+    "express": "~3.4.8",
+    "browserify-middleware": "~2.4.0",
+    "jquery": "~2.1.0",
+    "twbs": "0.0.6",
+    "jade-highlight": "0.0.1",
+    "highlight-codemirror": "~3.20.0",
+    "inconsolata": "0.0.2",
+    "jade-code-mirror": "~1.0.5",
+    "code-mirror": "~3.22.0",
+    "handle": "~1.0.0",
+    "jade-highlighter": "~1.0.5",
+    "marked": "~0.3.2"
   },
   "component": {
     "scripts": {

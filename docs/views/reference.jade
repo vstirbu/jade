@@ -1,0 +1,25 @@
+extends ./layout.jade
+
+block content
+  mixin link(name)
+    - var id = name.replace(/ /g, '-')
+    li(class=(id === currentDocumentation ? 'active' : false))
+      a(href='/reference/' + id)= name
+  .row
+    .col-md-2
+      ul.nav.nav-pills.nav-stacked
+        +link('doctype')
+        +link('tags')
+        +link('attributes')
+        +link('plain text')
+        +link('code')
+        +link('comments')
+        +link('conditionals')
+        +link('iteration')
+        +link('case')
+        +link('filters')
+        +link('mixins')
+        +link('includes')
+        +link('extends')
+    .col-md-10
+      block documentation
